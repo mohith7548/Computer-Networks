@@ -1,3 +1,4 @@
+import random
 import socket
 
 
@@ -42,10 +43,32 @@ def decodeData(data, key):
     return remainder
 
 
+def manipulate_data(data):
+    data = list(data)
+
+    # Ask for #positions
+    number_of_positions = int(input('Enter number of positions to change: '))
+    print('number_of_positions =', number_of_positions)
+
+    # Don't change the last CRC remainder code bits
+    # Choose a random sample of numbers from 0-(max-3)
+    positions = random.sample(range(0, len(data) - 3), number_of_positions)
+    print('Changes to be done to these positions: ', positions)
+
+    for i in positions:
+        if data[i] == '1':
+            data[i] = '0'
+        else:
+            data[i] = '1'
+
+    data = "".join(data)
+    return data
+
+
 s = socket.socket()
 print("Socket successfully created")
 
-port = 12345
+port = 1234
 
 s.bind(('', port))
 print("socket binded to %s" % (port))
@@ -57,8 +80,14 @@ while True:
     print('Got connection from', addr)
 
     data = c.recv(1024).decode()
-
     print(data)
+
+    option = input('Do you want to interpret as wrong data (y/n): ')
+    if option == 'y':
+        data = manipulate_data(data)
+        print('Changed data =', data)
+    else:
+        print('Well, I assume you don\'t want to change!')
 
     if not data:
         break

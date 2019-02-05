@@ -2,7 +2,7 @@ import socket
 import pickle
 
 HOST = '127.0.0.1'
-PORT = 2001
+PORT = 2000
 data = 'Kiss me'
 
 

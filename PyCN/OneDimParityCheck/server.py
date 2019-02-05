@@ -36,6 +36,7 @@ print('Our Data is:', data)
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((HOST, PORT))
     s.listen()
+    print('Waiting for client...')
     conn, addr = s.accept()
     with conn:
         print('Connection by', addr)
