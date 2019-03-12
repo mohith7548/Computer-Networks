@@ -2,7 +2,8 @@ import random
 import socket
 import pickle
 
-HOST = '127.0.0.1'
+# HOST = '127.0.0.1'
+HOST = '172.30.1.204'
 PORT = 2000
 
 
