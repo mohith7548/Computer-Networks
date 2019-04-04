@@ -1,0 +1,23 @@
+CN Lab Task (02-04-2019)
+
+Task: TCP Socket Programming
+
+Write a TCP server program: which passively listens for an incoming TCP connection
+1. Write a TCP client program: which actively opens a TCP connection to the server;
+the server's IP address should be taken as a commandline parameter
+2. On connection establishment, the server should print the IPaddress and port of the
+client's end of the TCP connection
+3. After connection establishment, the server application should send 1500 bytes
+periodically, every SEND_INTERVAL milliseconds
+ What this means is: if the time since the previous send is lesser than
+SEND_INTERVAL, then make the process sleep (using usleep) for the
+appropriate amount of time.
+4. After connection establishment, the client application should receive 1500 bytes
+periodically, every RECEIVE_INTERVAL milliseconds
+ What this means is: if the time since the previous receive is lesser than
+RECEIVE_INTERVAL, then make the process sleep for the appropriate
+amount of time
+5. In the server and client programs, use appropriate fprintf(stderr) or “cerr” statements
+to illustrate how flow control happens; show this as the demo.
+Additional interest: run the above server and client programs on two different (or even
+the same) virtual machines. Use tcpdump to observe the advertised window field.

@@ -40,8 +40,6 @@ def get_general_ip(Class, bits_to_fix):
     ip = [[] for _ in range(2 ** bits_to_fix)]
     if type(Class) is B:
         base = '172.30.'
-        octet3 = '00000000'
-        octet4 = '00000000'
         comb = list(itertools.product(['0', '1'], repeat=bits_to_fix))
         comb = [''.join(list(e)) for e in comb]
         comb = [num + (8 - bits_to_fix) * '0' for num in comb]
@@ -75,8 +73,8 @@ def create_table(ip_network, subnets_with_nid):
 
 
 if __name__ == '__main__':
-    networks = 30  # int(input('Enter number of Networks: '))
-    hosts = 2000  # int(input('Enter number of Hosts/Ntwk: '))
+    networks = 16  # int(input('Enter number of Networks: '))
+    hosts = 4094  # int(input('Enter number of Hosts/Ntwk: '))
 
     print(networks, hosts)
 
