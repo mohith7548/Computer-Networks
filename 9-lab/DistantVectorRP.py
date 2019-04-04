@@ -83,7 +83,7 @@ if __name__ == '__main__':
     # Shortest path b/w any two nodes will never contain more than (n-1) edges, where n = #nodes
     # Already when we compute the dist_vector direclty from the data files, we completed one step, so run loop n-2 times now!
     for c in range(len(nodes) -2):
-        print('``````````````````Iteration-{}````````````````'.format(c + 1))
+        print('``````````````````Iteration-{}````````````````'.format(c + 2))   # index 0: not used ; index 1: already done when reading data
         for node in nodes:
             print('for node -', node.name)
             for i in range(len(node.old_vector)):
