@@ -3,7 +3,7 @@
 import math
 import ipaddress
 import itertools
-from network_classes import A, B, C
+from network_classes import *
 from tabulate import tabulate
 
 
