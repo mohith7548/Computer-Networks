@@ -36,7 +36,7 @@ def red_fun(name, id, obj):
 
 
 def get_direction(cur_id, src_id):
-    #       A        ___       (10)
+    #       A        -->       (10)
     #    C      B          (30)     (20)
     if cur_id > src_id:
         return 0  # Clockwise
