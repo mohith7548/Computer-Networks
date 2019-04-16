@@ -4,7 +4,7 @@ import getpass
 import sys
 import os
 
-HOST = '127.0.0.1'
+HOST = '172.30.3.202'
 COMMAND_PORT = 2100
 DATA_PORT = 2000
 

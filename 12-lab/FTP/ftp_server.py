@@ -2,13 +2,14 @@
 import socket
 import sys
 import os
+from threading import Thread
 
 msg = '''
    This program is basic implementation of FTP server
    FTP_DIRECTORY = <currentDir>/ftp_data
 '''
 
-HOST = '127.0.0.1'
+HOST = '172.30.3.202'
 COMMAND_PORT = 2100
 DATA_PORT = 2000
 FTP_DIR = os.getcwd() + '/ftp_data'
@@ -18,16 +19,16 @@ password = '12345'
 
 
 def verify_handshake_rightful_user(conn):
-    # print('Before credentials')
+    print('Before credentials')
     if handshake_msg == conn.recv(1024).decode():
-        # print('Before username')
+        print('Before username')
         conn.sendall(b'Username: ')
         if username == conn.recv(1024).decode():
-            # print('Before Password')
+            print('Before Password')
             # user is correct ask for password
             conn.sendall(b'Password: ')
             if password == conn.recv(1024).decode():
-                # print('Connection successful!')
+                print('Connection successful!')
                 conn.sendall(b'Connection Successful!')
                 return
 
@@ -93,10 +94,8 @@ def upload(conn, file_path, file_name):
 def handle_cmd(cmd, conn):
     res = None
     params = cmd.split(' ')
-    if params[0] == 'exit':
-        sys.exit(0)
 
-    elif params[0] == 'list':
+    if params[0] == 'list':
         # list all the files on the FTP server
         # print(os.getcwd())
         res = str(os.listdir(FTP_DIR))
@@ -122,6 +121,25 @@ def handle_cmd(cmd, conn):
         conn.sendall(b'Unknown command!')
 
 
+def start_new_client(conn, addr):
+    with conn:
+        is_active = True
+
+        # Send conformation
+        conn.sendall(handshake_msg.encode())
+
+        # Verify Handshake and credentials
+        verify_handshake_rightful_user(conn)
+
+        # Listen for commands
+        while is_active:
+            cmd = conn.recv(1024).decode()
+            if cmd == 'exit':
+                is_active = False
+                print('Connection closed by: ', addr)
+            handle_cmd(cmd, conn)
+
+
 def main():
     # Open server socket
     with socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM) as s:
@@ -129,19 +147,14 @@ def main():
         s.listen()
         print('Waiting for the client...')
 
-        conn, addr = s.accept()
-        print('Connection by: ', addr)
-
-        with conn:
-            # Send conformation
-            conn.sendall(handshake_msg.encode())
-            # Verify Handshake and credentials
-            verify_handshake_rightful_user(conn)
-
-            # Listen for commands
-            while True:
-                cmd = conn.recv(1024).decode()
-                handle_cmd(cmd, conn)
+        while True:
+            conn, addr = s.accept()
+            print('Connection by: ', addr)
+            try:
+                Thread(target=start_new_client, args=(conn, addr)).start()
+            except Exception as e:
+                print('New Client is not started', addr)
+                print('Error msg :\n', e)
 
 
 if __name__ == '__main__':

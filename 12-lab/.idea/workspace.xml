@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac924f89-aeca-4978-b531-7bf521934a2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/mohith.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FTP/ftp_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FTP/ftp_data/sample.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FTP/ftp_server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FTP/task.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FTP/ftp_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/FTP/ftp_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FTP/ftp_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/FTP/ftp_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP-task/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UDP-task/main.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FTP/ftp_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+            <state relative-caret-position="-8">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="e#19#32#0" expanded="true" />
               </folding>
@@ -45,11 +43,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FTP/ftp_client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+            <state relative-caret-position="-8">
+              <caret line="52" column="44" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="44" />
               <folding>
                 <element signature="e#19#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UDP-task/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="102" column="85" lean-forward="true" selection-start-line="102" selection-start-column="85" selection-end-line="102" selection-end-column="85" />
+              <folding>
+                <element signature="e#20#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UDP-task/Packet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -88,12 +107,13 @@
         <option value="$PROJECT_DIR$/RPC/rpc_server.py" />
         <option value="$PROJECT_DIR$/FTP/task.txt" />
         <option value="$PROJECT_DIR$/FTP/ftp_data/sample.txt" />
-        <option value="$PROJECT_DIR$/FTP/ftp_client.py" />
         <option value="$PROJECT_DIR$/FTP/ftp_server.py" />
+        <option value="$PROJECT_DIR$/FTP/ftp_client.py" />
+        <option value="$PROJECT_DIR$/UDP-task/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="242" />
     <option name="y" value="39" />
     <option name="width" value="1400" />
@@ -105,6 +125,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -116,23 +137,22 @@
             <path>
               <item name="12-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="12-lab" type="462c0819:PsiDirectoryNode" />
-              <item name="FTP" type="462c0819:PsiDirectoryNode" />
+              <item name="RPC" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="12-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="12-lab" type="462c0819:PsiDirectoryNode" />
-              <item name="FTP" type="462c0819:PsiDirectoryNode" />
-              <item name="ftp_data" type="462c0819:PsiDirectoryNode" />
+              <item name="UDP-task" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -151,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ftp_client">
+  <component name="RunManager" selected="Python.main">
     <configuration name="ftp_client" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="12-lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -259,11 +279,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.ftp_client" />
         <item itemvalue="Python.ftp_server" />
         <item itemvalue="Python.rpc_client" />
         <item itemvalue="Python.rpc_server" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -281,10 +301,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="242" y="39" width="1400" height="987" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1033" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25701624" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15955175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -294,7 +314,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943925" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3165888" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25055432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,23 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UDP-task/Packet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UDP-task/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="125" column="16" lean-forward="true" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
-          <folding>
-            <element signature="e#20#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RPC/task.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -403,16 +406,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FTP/task.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FTP/ftp_data/image.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FTP/ftp_data/image.jpg" />
     <entry file="file://$PROJECT_DIR$/FTP/ftp_data/maze">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -420,22 +414,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FTP/ftp_client.py">
+    <entry file="file://$PROJECT_DIR$/FTP/task.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FTP/ftp_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
           <folding>
             <element signature="e#19#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FTP/ftp_server.py">
+    <entry file="file://$PROJECT_DIR$/FTP/ftp_client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+        <state relative-caret-position="-8">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="44" />
           <folding>
             <element signature="e#19#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UDP-task/Packet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UDP-task/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="102" column="85" lean-forward="true" selection-start-line="102" selection-start-column="85" selection-end-line="102" selection-end-column="85" />
+          <folding>
+            <element signature="e#20#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
