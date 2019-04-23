@@ -7,9 +7,14 @@ from threading import Thread
 msg = '''
    This program is basic implementation of FTP server
    FTP_DIRECTORY = <currentDir>/ftp_data
+   Help commands:
+        0. help             : To print this Help message
+        1. list             : List all files in the FTP server
+        2. upload <path>    : Upload the file
+        3. download <file>  : Download the file to current directory
 '''
 
-HOST = '172.30.3.202'
+HOST = '127.0.0.1'
 COMMAND_PORT = 2100
 DATA_PORT = 2000
 FTP_DIR = os.getcwd() + '/ftp_data'
@@ -95,7 +100,11 @@ def handle_cmd(cmd, conn):
     res = None
     params = cmd.split(' ')
 
-    if params[0] == 'list':
+    if params[0] == 'help':
+        res = msg
+        # print(msg)
+        conn.sendall(res.encode())
+    elif params[0] == 'list':
         # list all the files on the FTP server
         # print(os.getcwd())
         res = str(os.listdir(FTP_DIR))
